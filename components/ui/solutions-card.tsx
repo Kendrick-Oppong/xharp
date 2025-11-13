@@ -1,24 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Solution } from "@/interfaces/homepage";
 
 export const SolutionCard = ({ solution }: { solution: Solution }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
+  // Resetting flip state on viewport resize to prevent stuck cards
+  useEffect(() => {
+    const handleResize = () => {
+      setIsFlipped(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="relative h-[419px] w-full perspective-1000">
-      <AnimatePresence mode="wait">
+    <div className="relative h-[419px] w-full [perspective:1000px]">
+      <AnimatePresence mode="wait" initial={false}>
         {!isFlipped ? (
           <motion.div
             key="front"
-            initial={{ rotateY: 0 }}
-            animate={{ rotateY: 0 }}
-            exit={{ rotateY: 90 }}
+            initial={{ rotateY: 0, opacity: 1 }}
+            animate={{ rotateY: 0, opacity: 1 }}
+            exit={{ rotateY: 90, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute inset-0 backface-hidden"
-            style={{ transformStyle: "preserve-3d" }}
+            className="absolute inset-0 [backface-visibility:hidden]"
+            style={{
+              transformStyle: "preserve-3d",
+              WebkitBackfaceVisibility: "hidden",
+              backfaceVisibility: "hidden",
+            }}
           >
             <div
               className="h-full bg-cover bg-center bg-no-repeat rounded-[20px] relative group"
@@ -46,12 +60,16 @@ export const SolutionCard = ({ solution }: { solution: Solution }) => {
         ) : (
           <motion.div
             key="back"
-            initial={{ rotateY: -90 }}
-            animate={{ rotateY: 0 }}
-            exit={{ rotateY: -90 }}
+            initial={{ rotateY: -90, opacity: 0 }}
+            animate={{ rotateY: 0, opacity: 1 }}
+            exit={{ rotateY: -90, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute inset-0 backface-hidden"
-            style={{ transformStyle: "preserve-3d" }}
+            className="absolute inset-0 [backface-visibility:hidden]"
+            style={{
+              transformStyle: "preserve-3d",
+              WebkitBackfaceVisibility: "hidden",
+              backfaceVisibility: "hidden",
+            }}
           >
             <div className="h-full bg-[#739B07] rounded-[20px] p-4 relative flex flex-col">
               <h3 className="text-[50px] font-serif italic mb-2">
