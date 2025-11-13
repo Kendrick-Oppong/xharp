@@ -1,19 +1,14 @@
 import { RiAddLine, RiGiftLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
+import { Logo } from "@/components/ui/logo";
 const DashboardDefaultPage = () => {
   return (
     <div className="max-w-full lg:max-w-[75%] mx-auto">
       {/* Mobile Header */}
       <header className="flex items-center justify-between mb-6 lg:hidden">
         {/* Logo */}
-        <Image
-          src="/xharp.png"
-          width={94}
-          height={35}
-          alt="xharp"
-          className="w-[94px] h-[35px]"
-        />
+        <Logo className="w-[94px] h-[35px]" />
         <button className="flex items-center gap-2 text-sm">
           <RiGiftLine />
           <span className="font-medium">Refer & Earn</span>

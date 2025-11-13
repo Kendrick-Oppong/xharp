@@ -5,6 +5,7 @@ import { RiArrowRightSLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Logo } from "./logo";
 
 export const SideBar = () => {
   const pathname = usePathname();
@@ -12,13 +13,7 @@ export const SideBar = () => {
   return (
     <aside className="flex flex-col pl-4 pr-2 pt-6 min-w-[249px] border-r shadow border-r-gray-300 h-screen sticky top-0">
       {/* Logo */}
-      <Image
-        src="/xharp.png"
-        width={94}
-        height={35}
-        alt="xharp"
-        className="mb-6 ml-4 w-[94px] h-[35px]"
-      />
+      <Logo className="mb-6 ml-4 w-[94px] h-[35px]" />
 
       {/* Navigation */}
       <ul className="space-y-3 flex-1">
