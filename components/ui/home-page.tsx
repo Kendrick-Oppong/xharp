@@ -2,13 +2,24 @@
 
 import { Logo } from "@/components/ui/logo";
 import { SolutionCard } from "@/components/ui/solutions-card";
-import { fadeIn, fadeInUp, footerLinks, partners, scaleIn, slideInLeft, slideInRight, solutions, staggerContainer, staggerItem } from "@/lib/constants/homepage";
+import {
+  fadeIn,
+  fadeInUp,
+  footerLinks,
+  partners,
+  scaleIn,
+  slideInLeft,
+  slideInRight,
+  solutions,
+  staggerContainer,
+  staggerItem,
+} from "@/lib/constants/homepage";
 import { RiArrowRightSLine } from "@remixicon/react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 export function HomePage() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="bg-black px-5 sm:px-14 lg:px-[190px] min-h-dvh text-white">
       {/* Header */}
@@ -262,7 +273,7 @@ export function HomePage() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p>© 2025 Xharp Event Technologies LTD</p>
+        <p>© {currentYear} Xharp Event Technologies LTD</p>
         <motion.div
           className="flex items-center gap-2.5"
           variants={staggerContainer}
