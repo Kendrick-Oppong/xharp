@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const baseURL = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-const ogImage = `${baseURL}/xharp.png`;
+const ogImage = `${baseURL}/Xharp-home.png`;
 
 export const homePageMetadata: Metadata = {
   title: {
