@@ -1,6 +1,6 @@
 import { RiAddLine, RiGiftLine } from "@remixicon/react";
 import Image from "next/image";
-
+import Link from "next/link";
 const DashboardDefaultPage = () => {
   return (
     <div className="max-w-full lg:max-w-[75%] mx-auto">
@@ -12,7 +12,7 @@ const DashboardDefaultPage = () => {
           width={94}
           height={35}
           alt="xharp"
-          className=""
+          className="w-[94px] h-[35px]"
         />
         <button className="flex items-center gap-2 text-sm">
           <RiGiftLine />
@@ -60,8 +60,10 @@ const DashboardDefaultPage = () => {
         <p className="text-gray-600 text-sm">
           Add new event and stay ahead of the curve
         </p>
-        <button className="bg-black/90 mt-[17px] mx-auto flex gap-3 items-center text-white font-medium py-2.5 px-4 rounded-[10px] hover:bg-black/85 text-sm">
-          <RiAddLine size={20} /> Create event
+        <button className="bg-black/90 mt-[17px] mx-auto flex items-center text-white font-medium py-2.5 px-4 rounded-[10px] hover:bg-black/85 text-sm">
+          <Link href="/create-event" className="flex items-center gap-3 ">
+            <RiAddLine size={20} /> Create event
+          </Link>
         </button>
       </section>
     </div>

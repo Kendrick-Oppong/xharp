@@ -20,4 +20,12 @@
   body {
     @apply bg-background font-inter;
   }
+
+  input {
+    @apply h-10 border px-3 rounded-md focus:outline-none focus:ring-1 focus:border-gray-400;
+  }
+
+  textarea, select {
+    @apply  focus:outline-none focus:ring-1 focus:border-gray-400 resize-none;
+  }
 }

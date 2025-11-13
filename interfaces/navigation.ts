@@ -5,3 +5,9 @@ export interface NavItem {
   href: string;
   icon: RemixiconComponentType;
 }
+
+export interface ImageUploadProps {
+  error?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  clearError: () => void;
+}
