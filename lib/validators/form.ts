@@ -5,11 +5,8 @@ export const formSchema = z.object({
   eventCategory: z.string().min(1, "Event category is required"),
   customURL: z
     .string()
-    .min(1, "Custom URL is required")
-    .regex(
-      /^usexharp\.io\/discover\/[a-zA-Z0-9-]+$/,
-      "URL must follow the format: usexharp.io/discover/your-custom-name"
-    ),
+    .min(1, "Custom URL is required"),
+   
   eventDescription: z.string().min(1, "Description is required"),
   eventImage: z
     .any()

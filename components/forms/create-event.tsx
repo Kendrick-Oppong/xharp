@@ -51,7 +51,7 @@ export const CreateEventForm = () => {
   return (
     <>
       <div className="border-b border-b-gray-300">
-        <div className="flex items-center justify-between max-w-[67%] mx-auto py-4">
+        <div className="flex items-center justify-between px-6 sm:px-0 sm:max-w-[67%] mx-auto py-4">
           <Image
             src="/xharp.png"
             width={94}
@@ -124,15 +124,24 @@ export const CreateEventForm = () => {
           {/* Custom URL */}
           <div>
             <label className="block text-sm font-medium">Custom URL</label>
-            <input
-              {...form.register("customURL")}
-              className={`mt-1 p-3 w-full border rounded-lg ${
-                form.formState.errors.customURL
-                  ? "border-red-500"
-                  : "border-gray-300"
-              }`}
-              placeholder="usexharp.io/discover/your-custom-name"
-            />
+            <div className="mt-1 flex items-center border border-gray-300 rounded-lg overflow-hidden">
+              <span
+                className={`px-3 py-2  text-gray-500 border-r rounded-r-none rounded-l-lg border-r-gray-300 ${
+                  form.formState.errors.customURL ? "border border-red-500" : ""
+                }`}
+              >
+                usexharp.io/discover/
+              </span>
+              <input
+                {...form.register("customURL")}
+                className={`p-3 w-full border rounded-l-none rounded-r-lg ${
+                  form.formState.errors.customURL
+                    ? "border-red-500"
+                    : "border-gray-300"
+                }`}
+                placeholder="your-custom-name"
+              />
+            </div>
             {form.formState.errors.customURL && (
               <p className="text-red-500 text-sm mt-1">
                 {form.formState.errors.customURL.message}
@@ -198,4 +207,3 @@ export const CreateEventForm = () => {
     </>
   );
 };
-
