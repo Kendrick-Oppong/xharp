@@ -1,13 +1,21 @@
 import Image from "next/image";
 
-export const Logo = ({ className }: { className?: string }) => {
+interface LogoProps {
+  className?: string;
+  variant?: "primary" | "secondary";
+}
+
+export const Logo = ({ className, variant = "primary" }: LogoProps) => {
+  const src = variant === "primary" ? "/xharp.png" : "/xharp-secondary.png";
+
   return (
     <Image
-      src="/xharp.png"
+      src={src}
       width={94}
       height={35}
-      alt="xharp"
+      alt="xharp logo"
       className={className}
+      priority
     />
   );
 };
