@@ -44,7 +44,7 @@ export const SolutionCard = ({ solution }: { solution: Solution }) => {
               {/* gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-[20px]" />
 
-              <h3 className="absolute top-3 left-4 text-white text-[50px] font-serif italic z-10">
+              <h3 className="absolute top-3 left-4 text-white text-[45px] font-serif italic z-10">
                 {solution.title}
               </h3>
 
@@ -72,7 +72,7 @@ export const SolutionCard = ({ solution }: { solution: Solution }) => {
             }}
           >
             <div className="h-full bg-[#739B07] rounded-[20px] p-4 relative flex flex-col">
-              <h3 className="text-[50px] font-serif italic mb-2">
+              <h3 className="text-[45px] font-serif italic mb-2">
                 {solution.title}
               </h3>
               <p className=" leading-relaxed flex-1">{solution.description}</p>
