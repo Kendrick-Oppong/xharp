@@ -12,7 +12,7 @@ const DashboardDefaultPage = () => {
           width={94}
           height={35}
           alt="xharp"
-          className=""
+          className="w-[94px] h-[35px]"
         />
         <button className="flex items-center gap-2 text-sm">
           <RiGiftLine />

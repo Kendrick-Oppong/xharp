@@ -17,7 +17,7 @@ export const SideBar = () => {
         width={94}
         height={35}
         alt="xharp"
-        className="mb-6 ml-4"
+        className="mb-6 ml-4 w-[94px] h-[35px]"
       />
 
       {/* Navigation */}

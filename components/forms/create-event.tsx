@@ -57,7 +57,7 @@ export const CreateEventForm = () => {
             width={94}
             height={35}
             alt="xharp"
-            className=""
+            className="w-[94px] h-[35px]"
           />
           <div className="p-1 bg-gray-200 rounded-full">
             <RiCloseLine size={20} onClick={() => router.push("/dashboard")} />
