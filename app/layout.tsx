@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
+import { homePageMetadata } from "@/lib/constants/metadata";
 import "./globals.css";
+import type { Metadata } from "next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,24 +15,7 @@ const instrumentSerif = Instrument_Serif({
   weight: ["400"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Xharp – Create, Manage & Launch Events Effortlessly",
-    template: "%s | Xharp",
-  },
-  description:
-    "Xharp helps creators and organizations manage nominations, votes, and event ticketing in one intuitive dashboard. Simplify your workflow, engage your audience, and launch impactful events effortlessly.",
-  keywords: [
-    "Xharp",
-    "Event Management",
-    "Voting Platform",
-    "Ticketing App",
-    "SaaS Dashboard",
-    "Next.js SaaS",
-  ],
-  authors: [{ name: "Xharp Team" }],
-  creator: "Xharp",
-};
+export const metadata: Metadata = homePageMetadata;
 
 export default function RootLayout({
   children,
