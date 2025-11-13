@@ -16,6 +16,7 @@ Xharp is a modern event management platform built with Next.js, designed to help
 - **Framework**: Next.js 16 (App Router)
 - **Frontend**: React 19, TypeScript
 - **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
 - **Forms**: React Hook Form with Zod validation
 - **Icons**: Remixicon React
 - **Fonts**: Inter and Instrument Serif (Google Fonts)
@@ -27,12 +28,17 @@ Xharp is a modern event management platform built with Next.js, designed to help
 xharp/
 ├── app/                          # Next.js App Router pages and layouts
 │   ├── create-event/             # Event creation page
+│   │   └── page.tsx              # Event creation form page
 │   ├── dashboard/                # Dashboard pages
 │   │   ├── donations/            # Donations management
+│   │   │   └── page.tsx          # Donations page
 │   │   ├── event-pay/            # Event payment management
+│   │   │   └── page.tsx          # Event payment page
 │   │   ├── settings/             # User settings
+│   │   │   └── page.tsx          # Settings page
 │   │   ├── layout.tsx            # Dashboard layout with sidebar
 │   │   └── page.tsx              # Main dashboard (E-tickets)
+│   ├── favicon.ico               # Favicon
 │   ├── globals.css               # Global styles
 │   ├── layout.tsx                # Root layout
 │   └── page.tsx                  # Home page
@@ -41,23 +47,46 @@ xharp/
 │   │   ├── create-event.tsx      # Event creation form
 │   │   └── image-upload.tsx      # Image upload component
 │   └── ui/                       # UI components
+│       ├── home-page.tsx         # Home page component
+│       ├── logo.tsx              # Logo component
 │       ├── mobile-nav.tsx        # Mobile navigation
-│       └── side-bar.tsx          # Desktop sidebar
+│       ├── side-bar.tsx          # Desktop sidebar
+│       └── solutions-card.tsx    # Solutions card component
 ├── interfaces/                   # TypeScript interfaces
+│   ├── homepage.ts               # Homepage interfaces
 │   └── navigation.ts             # Navigation and component types
 ├── lib/                          # Utility libraries
 │   ├── constants/                # Application constants
+│   │   ├── homepage.ts           # Homepage constants
 │   │   └── side-nav.ts           # Sidebar navigation items
 │   └── validators/               # Validation schemas
 │       └── form.ts               # Form validation schemas
 ├── public/                       # Static assets
+│   ├── calbank.png
 │   ├── calendar.svg
+│   ├── challenge.png
+│   ├── founders-hub.png
+│   ├── frame.png
+│   ├── globe.png
+│   ├── hardware.webp
+│   ├── hubtel.png
+│   ├── instagram.png
+│   ├── linkedin.png
+│   ├── medium.png
+│   ├── payment.webp
+│   ├── paystack.png
+│   ├── software.webp
+│   ├── solution.png
+│   ├── stanbic.png
 │   ├── user.svg
-│   └── xharp.png                 # Logo
+│   ├── x.png
+│   ├── xharp-secondary.png
+│   └── xharp.png               # Logo
 ├── .gitignore                    # Git ignore rules
 ├── eslint.config.mjs             # ESLint configuration
 ├── next.config.ts                # Next.js configuration
 ├── package.json                  # Dependencies and scripts
+├── package-lock.json             # NPM lock file
 ├── postcss.config.mjs            # PostCSS configuration
 ├── README.md                     # Project documentation
 └── tsconfig.json                 # TypeScript configuration
