@@ -5,6 +5,7 @@
   --foreground: #171717;
   --primary: #0e121b;
   --primary-foreground: #525866;
+  --secondary:#FF4B07
 }
 
 @theme inline {
@@ -13,6 +14,7 @@
   --font-inter: var(--font-inter);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
   --font-serif: var(--font-instrument-serif);
 }
 
