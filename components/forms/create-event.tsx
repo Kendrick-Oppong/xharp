@@ -5,8 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { RiArrowDownSLine, RiCloseLine } from "@remixicon/react";
 import { EventFormData, formSchema } from "@/lib/validators/form";
 import { ImageUpload } from "./image-upload";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Logo } from "../ui/logo";
 
 export const CreateEventForm = () => {
   const router = useRouter();
@@ -52,13 +52,7 @@ export const CreateEventForm = () => {
     <>
       <div className="border-b border-b-gray-300">
         <div className="flex items-center justify-between px-6 sm:px-0 sm:max-w-[67%] mx-auto py-4">
-          <Image
-            src="/xharp.png"
-            width={94}
-            height={35}
-            alt="xharp"
-            className="w-[94px] h-[35px]"
-          />
+          <Logo className="w-[94px] h-[35px]" />
           <div className="p-1 bg-gray-200 rounded-full">
             <RiCloseLine size={20} onClick={() => router.push("/dashboard")} />
           </div>

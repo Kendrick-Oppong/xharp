@@ -11,3 +11,10 @@ export interface ImageUploadProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   clearError: () => void;
 }
+
+export interface Partner {
+  id: number;
+  src: string;
+  width: number;
+  height: number;
+}
