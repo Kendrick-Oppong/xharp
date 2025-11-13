@@ -267,7 +267,7 @@ export function HomePage() {
 
       {/* Footer */}
       <motion.footer
-        className="flex items-center justify-between pb-[24px]"
+        className="flex items-center flex-wrap justify-between pb-[24px]"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -275,7 +275,7 @@ export function HomePage() {
       >
         <p>© {currentYear} Xharp Event Technologies LTD</p>
         <motion.div
-          className="flex items-center gap-2.5"
+          className="flex items-center gap-2.5 mt-4 sm:mt-0"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
