@@ -18,10 +18,12 @@ export const ImageUpload = ({
     if (files && files.length > 0) {
       const file = files[0];
       const reader = new FileReader();
+      
       reader.onloadend = () => {
         setPreview(reader.result as string);
         setFileName(file.name);
       };
+      
       reader.readAsDataURL(file);
     }
   };
